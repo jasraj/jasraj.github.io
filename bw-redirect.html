@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Bennett-Wisdom Wedding iFrame</title>
+
+        <style>
+            html {
+                height: 100%
+            }
+
+            body {
+                margin: 0px;
+                height: 100%;
+                overflow-y: hidden;
+            }
+
+            #theIframe {
+                height: 100%;
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <iframe id="theIframe" frameborder="0" seamless="seamless"></iframe>
+
+        <script type="text/javascript">
+            (function() {
+                var userAgent = navigator.userAgent;
+
+                if(userAgent.includes("mobile")) {
+                    console.log("Loading mobile website into iFrame");
+                    document.getElementById("theIframe").src = "https://m.weddingspot.co.uk/web/bennettwisdomwedding";
+                } else {
+                    console.log("Loading desktop website into iFrame");
+                    document.getElementById("theIframe").src = "https://www.weddingspot.co.uk/web/bennettwisdomwedding";
+                }
+            })();
+        </script>
+    </body>
+</html>
