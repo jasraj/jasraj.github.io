@@ -30,7 +30,7 @@
             (function() {
                 var userAgent = navigator.userAgent;
 
-                if(userAgent.includes("mobile")) {
+                if(userAgent.includes("mobile") || userAgent.includes("Mobile")) {
                     console.log("Loading mobile website into iFrame");
                     document.getElementById("theIframe").src = "https://m.weddingspot.co.uk/web/bennettwisdomwedding";
                 } else {
